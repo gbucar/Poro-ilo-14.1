@@ -70,7 +70,7 @@ fetch("/data.csv")
                 let u1 = data["napetost"][index>13 ? index-14 : index];
                 let u2 = data["napetost"][(index>13 ? index-14 : index)-1];
                 let r = Math.floor((i1-i2)/(u1-u2)*1000)/1000
-                tooltip.attr("style", `opacity: 1; left: ${parseInt(a[index].attributes.cx.value) + 30}px; top: ${parseInt(a[index].attributes.cy.value)+10}px`)
+                tooltip.attr("style", `opacity: 1; left: ${d3.event.pageX+10}px; top: ${d3.event.pageY-30}px`)
                     .text(`Napetost: ${u1}\nTok: ${i1} mA\nUpornost: ${r}`)
             
             })

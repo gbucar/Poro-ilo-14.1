@@ -49,3 +49,12 @@ body {
 .green {
     color:rgb(0, 255, 106);
 }
+a {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: gray;
+    color: white;
+    padding: 3px;
+    border-radius: 2px;
+}
