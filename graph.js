@@ -19,11 +19,10 @@ let tooltip = body.append("div")
     .attr("id", "tooltip")
     .attr("style","opacity: 0;")
 
-fetch("/Porocilo-14.1/data.csv")
+fetch("https://gbucar.github.io/Porocilo-14.1/data.csv")
     .then(a=>a.text())
     .then(data=>{
-        console.log(data)
-        data = data.split("\r\n").map(a=>a.split(","))
+        data = data.split("\n").map(a=>a.split(","))
         data = {
             "napetost": data[0].slice(1,data[0].length).map(a=>parseFloat(a)),
             "tok-žarnica": data[1].slice(1,data[1].length).map(a=>parseFloat(a)),
