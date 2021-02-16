@@ -22,6 +22,7 @@ let tooltip = body.append("div")
 fetch("/data.csv")
     .then(a=>a.text())
     .then(data=>{
+        console.log(data)
         data = data.split("\r\n").map(a=>a.split(","))
         data = {
             "napetost": data[0].slice(1,data[0].length).map(a=>parseFloat(a)),
