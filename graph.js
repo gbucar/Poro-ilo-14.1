@@ -19,7 +19,7 @@ let tooltip = body.append("div")
     .attr("id", "tooltip")
     .attr("style","opacity: 0;")
 
-fetch("/data.csv")
+fetch("/Porocilo-14.1/data.csv")
     .then(a=>a.text())
     .then(data=>{
         console.log(data)
